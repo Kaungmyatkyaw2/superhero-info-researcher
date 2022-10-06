@@ -69,15 +69,23 @@ const App = () => {
 
 
   return (
-    <div className='flex justify-center py-[100px] items-center min-h-[100vh]'>
-      <div className='w-[75%] rounded-[5px] bg-white shadow-cus py-[30px] px-[20px] flex justify-center items-center flex-col'>
+    <div className='flex justify-center py-[100px] flex-col space-y-[50px] tracking-widest items-center min-h-[100vh]'>
+
+        <h1 className="text-2xl font-bold uppercase">SuperHero's Details</h1>
+
+      <div className='w-[75%] space-y-[80px] rounded-[5px] bg-white shadow-cus pt-[30px] px-[20px] flex justify-center items-center flex-col'>
    
 
     <BrowserRouter>
           {/* search bar */}
-          <div className='space-x-3'>
-          <input type="text" onChange={handleChange} className='outline-none text-[12px] placeholder:text-[12px] w-[300px] px-[10px] pb-[5px] border-b border-gray-400' placeholder='search by name'/>
-          <Link to="/result" onClick={handleSearch} className="px-4 py-[5px] text-[12px] uppercase bg-red-600 rounded text-white">Search</Link>
+          <div className='flex justify-around w-full'>
+            <div className='w-[50%] text-center'>
+              <h1 className='text-lg font-bold'>Super<span className='text-base text-red-600'>Hero</span></h1>
+            </div>
+          <div className="space-x-3 flex w-[50%]">
+              <input type="text" onChange={handleChange} className='outline-none text-[12px] placeholder:text-[12px] w-[50%] px-[10px] py-[5px] border border-gray-400' placeholder='search by name'/>
+              <Link to="/result" onClick={handleSearch} className="px-4 py-[5px] text-[10px] uppercase bg-red-600 rounded text-white flex items-center my-0">Search</Link>
+          </div>
           </div>
       
       {/* Routes */}
@@ -89,6 +97,13 @@ const App = () => {
                   </Searched.Provider>}>
               </Route>
           </Routes>
+
+          {/* bottombar */}
+          <div className='w-full py-[20px] flex justify-center text-[11px] font-bold border-t border-gray-400'>
+
+            <p>Created by Zen Aku . Copy right and others right reservers.</p>
+
+          </div>
     </BrowserRouter>
 
      

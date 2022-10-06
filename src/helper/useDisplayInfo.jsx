@@ -1,6 +1,8 @@
 import React from 'react'
 
 const useDisplayInfo = (data,detail) => {
+
+    console.log(data)
   return (
     <>
     {/* to display hero info */}
@@ -13,7 +15,12 @@ const useDisplayInfo = (data,detail) => {
                     Object?.keys(data[detail])?.map((key,index) => {
 
                         return (
-                            <p key={index} className="space-x-2 text-[13px]"><span className='text-gray-500 font-bold'>{key.toLocaleUpperCase()}</span> <span>:</span> <span className='capitalize'>{data[detail][key] + " . "}</span></p>
+                            <p key={index} className="space-x-2 text-[13px]"><span className='text-gray-500 font-bold'>{key.toLocaleUpperCase()}</span> <span>:</span> 
+                            <span className='capitalize'>
+                            {(data[detail][key] == '-') ? 'No data found' : data[detail][key]}
+                            </span>
+                            </p>
+                            
                         )
 
                     })
