@@ -6,9 +6,9 @@ const useDisplayInfo = (data,detail) => {
   return (
     <>
     {/* to display hero info */}
-    <div className='w-[50%] flex justify-center items-center py-[50px]'>
+    <div className='lg:w-[50%] w-[100%] flex items-center py-[50px]'>
 
-            <div className=' w-[95%] px-[20px] justify-center flex'>
+            <div className=' w-[95%] lg:px-[20px] sm:px-[40px] px-[10px] lg:justify-center justify-start flex'>
             <div className='space-y-6'>
             <p className='text-xl tracking-widest text-red-500 font-bold capitalize'>{detail}</p>
                 {

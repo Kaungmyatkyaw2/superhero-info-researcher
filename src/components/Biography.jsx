@@ -22,7 +22,7 @@ const Biography = () => {
 
 
   return (
-    <div className='w-full mt-[40px] flex flex-wrap'>
+    <div className='w-full mt-[40px] flex flex-wrap justify-center'>
 
         {/* Image Container */}
         <ImageContainer data={data_from_search}/>

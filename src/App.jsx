@@ -73,19 +73,19 @@ const App = () => {
 
         <h1 className="text-2xl font-bold uppercase">SuperHero's Details</h1>
 
-      <div className='w-[75%] space-y-[80px] rounded-[5px] bg-white shadow-cus pt-[30px] px-[20px] flex justify-center items-center flex-col'>
+      <div className='sm:w-[75%] w-[95%] space-y-[80px] rounded-[5px] bg-white shadow-cus pt-[30px] px-[20px] flex justify-center items-center flex-col'>
    
 
     <BrowserRouter>
           {/* search bar */}
-          <div className='flex justify-around w-full'>
-            <div className='w-[50%] text-center'>
+          <div className='flex sm:flex-row flex-col justify-around w-full'>
+            <div className='sm:w-[50%] w-full text-center'>
               <h1 className='text-lg font-bold'>Super<span className='text-base text-red-600'>Hero</span></h1>
             </div>
-          <div className="space-x-3 flex w-[50%]">
-              <input type="text" onChange={handleChange} className='outline-none text-[12px] placeholder:text-[12px] w-[50%] px-[10px] py-[5px] border border-gray-400' placeholder='search by name'/>
-              <Link to="/result" onClick={handleSearch} className="px-4 py-[5px] text-[10px] uppercase bg-red-600 rounded text-white flex items-center my-0">Search</Link>
-          </div>
+            <div className="space-x-3 flex sm:w-[50%] w-full sm:justify-start justify-center sm:mt-0 mt-6">
+                <input type="text" onChange={handleChange} className='outline-none text-[12px] placeholder:text-[12px] w-[50%] px-[10px] py-[5px] border border-gray-400' placeholder='search by name'/>
+                <Link to="/result" onClick={handleSearch} className="px-4 py-[5px] text-[10px] uppercase bg-red-600 rounded text-white flex items-center my-0">Search</Link>
+            </div>
           </div>
       
       {/* Routes */}
@@ -101,7 +101,7 @@ const App = () => {
           {/* bottombar */}
           <div className='w-full py-[20px] flex justify-center text-[11px] font-bold border-t border-gray-400'>
 
-            <p>Created by Zen Aku . Copy right and others right reservers.</p>
+            <p className='text-center'>Created by Zen Aku . Copy right and others right reservers.</p>
 
           </div>
     </BrowserRouter>
